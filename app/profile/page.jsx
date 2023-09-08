@@ -6,7 +6,6 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const MyProfile = () => {
-<<<<<<< HEAD
   const router = useRouter();
   const [posts, setPosts] = useState([]);
 
@@ -48,29 +47,6 @@ const MyProfile = () => {
     <Profile
       name="My"
       desc="Welcome to your personalized profile page. Share your exceptional prompts and inspire others with the power of your imagination"
-=======
-  const [posts, setPosts] = useState([]);
-
-  const { data: session } = useSession();
-  useRouter;
-
-  const fetchPosts = async () => {
-    const response = await fetch("/api/users/${session.user.id}/posts");
-    const data = await response.json();
-    setPosts(data);
-  };
-  useEffect(() => {
-    if (session?.user.id) fetchPosts();
-  }, []);
-
-  const handleEdit = () => {};
-
-  const handleDelete = async () => {};
-  return (
-    <Profile
-      name="My"
-      desc="welcome to your profile"
->>>>>>> dev/main
       data={posts}
       handleEdit={handleEdit}
       handleDelete={handleDelete}
